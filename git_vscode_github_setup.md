@@ -51,6 +51,10 @@ git config --global core.editor "code --wait"
 2. デフォルトの保存場所でOK。パスフレーズは任意。
 3. 公開鍵の内容をコピー：
     ```sh
+    # PowerShellの場合
+    Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub
+
+    # コマンドプロンプトの場合
     type %USERPROFILE%\.ssh\id_ed25519.pub
     ```
 
