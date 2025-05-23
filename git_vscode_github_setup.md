@@ -107,7 +107,45 @@ VSCodeのコマンドパレット（`Ctrl+Shift+P`または`Cmd+Shift+P`）で
 
 ---
 
-## 7. よく使うGitコマンド
+## 7. デフォルトブランチをmainに設定
+
+新しいリポジトリのデフォルトブランチを`main`に設定するには：
+
+### 新しいリポジトリを作成する場合
+```sh
+git config --global init.defaultBranch main
+```
+
+### 既存のリポジトリをmainに変更する場合
+
+1. 現在のブランチが`master`であることを確認：
+   ```sh
+   git branch
+   ```
+
+2. `master`ブランチを`main`にリネーム：
+   ```sh
+   git branch -M main
+   ```
+
+3. リモートリポジトリが存在する場合、プッシュ：
+   ```sh
+   git push -u origin main
+   ```
+
+4. GitHubなどのリモートリポジトリで、デフォルトブランチを`main`に変更：
+   - リポジトリの「Settings」→「Branches」に移動
+   - 「Default branch」で`main`を選択
+   - 「Update」をクリック
+
+5. 必要に応じて古い`master`ブランチを削除：
+   ```sh
+   git push origin --delete master
+   ```
+
+---
+
+## 8. よく使うGitコマンド
 
 ```sh
 git status         # 状態確認
