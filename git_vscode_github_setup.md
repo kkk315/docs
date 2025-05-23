@@ -41,7 +41,21 @@ git config --global core.editor "code --wait"
 
 ---
 
-## 4. SSHキーの作成とGitHubへの登録
+## 4. GitHubのno-replyメールアドレスの確認
+
+1. GitHubにログイン後、右上のプロフィールアイコンをクリック
+2. 「Settings」を選択
+3. 左メニューから「Emails」を選択
+4. 「Keep my email address private」が有効になっている場合、`ID+ユーザー名@users.noreply.github.com` の形式のメールアドレスが表示されます
+5. このメールアドレスをコピーして、Gitの設定で使用できます
+
+> **Note**  
+> プライバシー設定で「Keep my email address private」を有効にすると、GitHubはこのno-replyメールアドレスをコミットの作者として使用します。
+
+---
+
+## 5. SSHキーの作成とGitHubへの登録
+
 
 ### Windows
 1. 「Git Bash」または「PowerShell」で以下を実行：
